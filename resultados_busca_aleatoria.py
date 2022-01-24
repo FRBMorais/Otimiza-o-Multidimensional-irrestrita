@@ -1,4 +1,4 @@
-from classe_buscaaleatoria import BuscaAleatoria
+from classe_buscaaleatoria_ORDEM_0 import BuscaAleatoria
 
 """
 Método de ordem 0 --> BUSCA ALEATÓRIA -- ok --> BEM SUCEDIDO
