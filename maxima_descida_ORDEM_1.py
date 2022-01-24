@@ -7,7 +7,7 @@ class MaximaDescida:
                  x_vtr,
                  analise,
                  iteracoes_limite,
-                 tol=10e-6,
+                 tol=10e-8,
                  h=10e-4):
 
         self.x_vtr = x_vtr
@@ -82,8 +82,8 @@ class MaximaDescida:
                    + 0.5 * k1 * x_vetor[1] ** 2 - ff * x_vetor[1]
 
     def estrutura_metodo(self):
-        cp = 1
-        while cp > self.tol and self.n_iteracoes < self.iteracoes_limite:
+        tolerancia = 1
+        while tolerancia > self.tol and self.n_iteracoes < self.iteracoes_limite:
             """
             1. Start with an arbitrary initial point X1. Set the iteration number as i = 1;  ok
             2. Find the search direction Si as; Equation from book;  ok
@@ -96,11 +96,14 @@ class MaximaDescida:
             self.Si.append(-self.derivada_parcial_x(self.x_vtr))
             self.Si.append(-self.derivada_parcial_y(self.x_vtr))
 
-            bi = Bisseccao(-10, 10, 0.01, self.x_vtr, self.Si, self.analise)
+            bi = Bisseccao(-10, 10, 0.001, self.x_vtr, self.Si, self.analise)
             bi.metodo()
             lambdd_ideal = bi.c
 
             x_vtr_novo = [self.x_vtr[i] + lambdd_ideal * self.Si[i] for i in range(len(self.x_vtr))]
+
+            tolerancia = abs((self.f_xi(x_vtr_novo) - self.f_xi(self.x_vtr)) / self.f_xi(self.x_vtr))
+
             self.x_vtr = x_vtr_novo.copy()
             self.Si.clear()
             print(f'X{self.n_iteracoes}:  {self.x_vtr}\n'
