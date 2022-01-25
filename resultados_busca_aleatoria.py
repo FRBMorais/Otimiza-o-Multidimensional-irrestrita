@@ -61,10 +61,10 @@ f(x, y)mín == 0.00154 ---------- (1.00336, 1.0227)
 # teste = BuscaAleatoria([1, 1], [5, 5], [-5, -5], 100_000, 7)
 # teste.estrutura_metodo()
 # print(teste.x_vetor_otimo, teste.f_xi(teste.x_vetor_otimo))
-"""
-f(x, y)mín == -1 ---------- (pi, pi)
-f(x, y)mín == -0.9995 ---------- (3.1495, 3.1258)
-"""
+# """
+# f(x, y)mín == -1 ---------- (pi, pi)
+# f(x, y)mín == -0.9995 ---------- (3.1495, 3.1258)
+# """
 #
 # # Sxhaffer number 2 -- ok --> BEM SUCEDIDO
 # teste = BuscaAleatoria([1, 1], [5, 5], [-4, -4], 100_000, 8)

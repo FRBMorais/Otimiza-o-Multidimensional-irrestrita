@@ -1,7 +1,7 @@
 from maxima_descida_ORDEM_1 import MaximaDescida
 
 
-# # Sphere Function -- OK -- BEM SUCEDIDO
+# Sphere Function -- OK -- BEM SUCEDIDO
 # teste = MaximaDescida([1, 1], 1, 10_000)
 # teste.estrutura_metodo()
 # print(f'Valor do ponto ótimo {teste.x_vtr},\n '
@@ -10,8 +10,8 @@ from maxima_descida_ORDEM_1 import MaximaDescida
 # """
 # f(x, y)mín == 0 ---------- (0, 0)
 # """
-
-# # Beale -- ok --> BEM SUCEDIDIDO
+#
+# Beale -- ok --> BEM SUCEDIDIDO
 # teste = MaximaDescida([0, 0], 2, 100000)
 # teste.estrutura_metodo()
 # print(f'Valor do ponto ótimo {teste.x_vtr},\n '
