@@ -1,4 +1,4 @@
-from maxima_descida_ORDEM_1 import MaximaDescida
+from Classe_maxima_descida_ORDEM_1 import MaximaDescida
 
 
 # Sphere Function -- OK -- BEM SUCEDIDO

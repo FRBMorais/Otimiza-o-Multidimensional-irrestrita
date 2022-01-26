@@ -1,5 +1,5 @@
 import numpy as np
-from bisseccao import Bisseccao
+from bisseccao_1D import Bisseccao
 
 
 class MaximaDescida:
