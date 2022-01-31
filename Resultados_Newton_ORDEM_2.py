@@ -6,7 +6,7 @@ from Newton_ORDEM_2 import NewtonSegundaOrdem
 # teste.metodo()
 # print(f'Valor do ponto ótimo {teste.x_vtr},\n '
 #       f'Valor da função no ponto ótimo {teste.f_xi(teste.x_vtr)}')
-
+# print(teste.n_iteracoes)
 """
 f(x, y)mín == 0 ---------- (0, 0)
 """
@@ -31,7 +31,7 @@ f(x, y)mín == 0 ---------- (3, 0.5)
 f(x, y)mín == 0 ---------- (0, 0)
 """
 # # Rastrigin
-# teste = NewtonSegundaOrdem([-0.1, 0.2], 4, 10)
+# teste = NewtonSegundaOrdem([-0.2, 0.2], 4, 10)
 # teste.metodo()
 # print(f'Valor do ponto ótimo {teste.x_vtr},\n '
 #       f'Valor da função no ponto ótimo {teste.f_xi(teste.x_vtr)}')
@@ -40,7 +40,7 @@ f(x, y)mín == 0 ---------- (0, 0)
 f(x, y)mín == 0 ---------- (0, 0)
 """
 # # Ackley
-# teste = NewtonSegundaOrdem([-3, 3], 5, 10_000)
+# teste = NewtonSegundaOrdem([-0.2, 0.2], 5, 10_000)
 # teste.metodo()
 # print(f'Valor do ponto ótimo {teste.x_vtr},\n '
 #       f'Valor da função no ponto ótimo {teste.f_xi(teste.x_vtr)}')
@@ -67,18 +67,18 @@ f(x, y)mín == 0 ---------- (1, 1)
 f(x, y)mín == -1 ---------- (pi, pi)
 """
 # # Sxhaffer number 2 -- OK --> BEM SUCEDIDO
-# teste = NewtonSegundaOrdem([2, 2], 8, 10_000)
+# teste = NewtonSegundaOrdem([10, 10], 8, 10_000)
 # teste.metodo()
 # print(f'Valor do ponto ótimo {teste.x_vtr},\n '
 #       f'Valor da função no ponto ótimo {teste.f_xi(teste.x_vtr)}')
-#
+
 """
 f(x, y)mín == 0 ---------- (1, 1)
 """
 # Problema Default -- ok --> BEM SUCEDIDO
-# teste = NewtonSegundaOrdem([2, 10], 9, 10_000)
-# teste.metodo()
-# print(teste.x_vtr, teste.f_xi(teste.x_vtr))
+teste = NewtonSegundaOrdem([2, 10], 9, 10_000)
+teste.metodo()
+print(teste.x_vtr, teste.f_xi(teste.x_vtr))
 """
 f(x, y)mín == -425.5319 ---------- (6.3830, 17.02013)
 """

@@ -13,7 +13,7 @@ class NewtonSegundaOrdem:
                  analise,
                  iteracoes_limite,
                  h=10e-4,
-                 tol=10e-4):
+                 tol=10e-8):
         self.analise = analise
         self.x_vtr = x_vtr
         self.iteracoes_limite = iteracoes_limite

@@ -5,40 +5,21 @@ import numpy as np
 """
 Método de ordem 0 --> BUSCA ALEATÓRIA -- ok --> BEM SUCEDIDO
 """
-# Sphere Function -- ok --> BEM SUCEDIDO
-x_min = -3
-x_max = 3
-
-y_min = -3
-y_max = 3
-
-
-teste = BuscaAleatoria([1, 1], [x_max, y_max], [-x_min, -x_max], 100_000, 1)
-teste.estrutura_metodo()
-print(teste.x_vetor_otimo, teste.f_xi(teste.x_vetor_otimo))
+# # Sphere Function -- ok --> BEM SUCEDIDO
+# teste = BuscaAleatoria([1, 1], [3, 3], [-3, -3], 100_000, 1)
+# teste.estrutura_metodo()
+# print(teste.x_vetor_otimo, teste.f_xi(teste.x_vetor_otimo))
+#
+# vetorx = [teste.caminho[i][0] for i in range(len(teste.caminho))]
+# vetory = [teste.caminho[i][1] for i in range(len(teste.caminho))]
+# plt.plot(vetorx, vetory, 'o')
+# plt.axis([-3, 3, -3, 3])  # [xmin, xmax, ymin, ymax]
+# plt.grid()
+# plt.show()
 """
 f(x, y)mín == 0 ---------- (0, 0)
 f(x, y)mín == 2.6930e-05 ---------- (0.00297, -0.00425)
 """
-
-
-print(teste.caminho)  # Vetor, contendo os pontos (x, y) aleatórios
-
-
-# x = np.linspace(-6, 6, 30)
-# y = np.linspace(-6, 6, 30)
-#
-# X, Y = np.meshgrid(x, y)
-# Z = f(X, Y)
-#
-# fig = plt.figure()
-# ax = plt.axes(projection='3d')
-# ax.contour3D(X, Y, Z, 50, cmap='binary')
-# ax.set_xlabel('x')
-# ax.set_ylabel('y')
-# ax.set_zlabel('z')
-# plt.show()
-
 #
 # # Beale Function -- ok --> BEM SUCEDIDO
 # teste = BuscaAleatoria([2, 1], [5, 3], [-4, -3], 100_000, 2)
@@ -89,10 +70,10 @@ f(x, y)mín == 0.00154 ---------- (1.00336, 1.0227)
 # teste = BuscaAleatoria([1, 1], [5, 5], [-5, -5], 100_000, 7)
 # teste.estrutura_metodo()
 # print(teste.x_vetor_otimo, teste.f_xi(teste.x_vetor_otimo))
-# """
-# f(x, y)mín == -1 ---------- (pi, pi)
-# f(x, y)mín == -0.9995 ---------- (3.1495, 3.1258)
-# """
+"""
+f(x, y)mín == -1 ---------- (pi, pi)
+f(x, y)mín == -0.9995 ---------- (3.1495, 3.1258)
+"""
 #
 # # Sxhaffer number 2 -- ok --> BEM SUCEDIDO
 # teste = BuscaAleatoria([1, 1], [5, 5], [-4, -4], 100_000, 8)
@@ -103,13 +84,19 @@ f(x, y)mín == 0 ---------- (0, 0)
 f(x, y)mín == 6.75017e-08 ---------- (0.0077, 0.00228)
 """
 #
-# # Problema Default -- ok --> BEM SUCEDIDO
-# teste = BuscaAleatoria([6, 15], [9, 18], [2, 14], 100_000, 9)
-# teste.estrutura_metodo()
-# print(teste.x_vetor_otimo, teste.f_xi(teste.x_vetor_otimo))
+# Problema Default -- ok --> BEM SUCEDIDO
+teste = BuscaAleatoria([2, 2], [20, 20], [0, 0], 100_000, 9)
+teste.estrutura_metodo()
+print(teste.x_vetor_otimo, teste.f_xi(teste.x_vetor_otimo))
 """
 f(x, y)mín == -425.5319 ---------- (6.3830, 17.02013)
 f(x, y)mín == -425.5318 ---------- (6.3758, 17.01633)
 """
+vetorx = [teste.caminho[i][0] for i in range(len(teste.caminho))]
+vetory = [teste.caminho[i][1] for i in range(len(teste.caminho))]
+plt.plot(vetorx, vetory, 'o')
+plt.axis([2, 20, 2, 20])  # [xmin, xmax, ymin, ymax]
+plt.grid()
+plt.show()
 
 
