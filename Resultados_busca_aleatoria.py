@@ -1,16 +1,44 @@
 from classe_buscaaleatoria_ORDEM_0 import BuscaAleatoria
+import matplotlib.pyplot as plt
+import numpy as np
 
 """
 Método de ordem 0 --> BUSCA ALEATÓRIA -- ok --> BEM SUCEDIDO
 """
-# # Sphere Function -- ok --> BEM SUCEDIDO
-# teste = BuscaAleatoria([1, 1], [3, 3], [-3, -3], 100_000, 1)
-# teste.estrutura_metodo()
-# print(teste.x_vetor_otimo, teste.f_xi(teste.x_vetor_otimo))
+# Sphere Function -- ok --> BEM SUCEDIDO
+x_min = -3
+x_max = 3
+
+y_min = -3
+y_max = 3
+
+
+teste = BuscaAleatoria([1, 1], [x_max, y_max], [-x_min, -x_max], 100_000, 1)
+teste.estrutura_metodo()
+print(teste.x_vetor_otimo, teste.f_xi(teste.x_vetor_otimo))
 """
 f(x, y)mín == 0 ---------- (0, 0)
 f(x, y)mín == 2.6930e-05 ---------- (0.00297, -0.00425)
 """
+
+
+print(teste.caminho)  # Vetor, contendo os pontos (x, y) aleatórios
+
+
+# x = np.linspace(-6, 6, 30)
+# y = np.linspace(-6, 6, 30)
+#
+# X, Y = np.meshgrid(x, y)
+# Z = f(X, Y)
+#
+# fig = plt.figure()
+# ax = plt.axes(projection='3d')
+# ax.contour3D(X, Y, Z, 50, cmap='binary')
+# ax.set_xlabel('x')
+# ax.set_ylabel('y')
+# ax.set_zlabel('z')
+# plt.show()
+
 #
 # # Beale Function -- ok --> BEM SUCEDIDO
 # teste = BuscaAleatoria([2, 1], [5, 3], [-4, -3], 100_000, 2)

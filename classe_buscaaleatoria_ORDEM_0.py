@@ -20,14 +20,14 @@ class BuscaAleatoria:
         self.r_vetor_aleatorios = []
         self.x_vetor_otimo = x_vtr
         self.n_iteracoes = 0
+        self.caminho = []
 
     def aleatorios(self):
         """
         :return: Retorna o vetor de valores aleatórios entre 0 e 1
         """
-        random.seed()
+        self.r_vetor_aleatorios.clear()
         self.r_vetor_aleatorios = [random.random(), random.random()]
-        # print(self.r_vetor_aleatorios)
 
     def f_xi(self, x_vetor):
         """
@@ -78,10 +78,13 @@ class BuscaAleatoria:
         """
         while self.n_iteracoes < self.n_iteracoes_limite:
             self.x_vetor_1.clear()
+            self.aleatorios()
+
             for i in range(2):
-                self.aleatorios()
                 self.x_vetor_1.append(self.xl_vetor[i] + self.r_vetor_aleatorios[i] *
                                       (self.xu_vetor[i] - self.xl_vetor[i]))
+
+            self.caminho.append(self.x_vetor_1.copy())
             if self.f_xi(self.x_vetor_1) < self.f_xi(self.x_vetor_otimo):
                 self.x_vetor_otimo = self.x_vetor_1.copy()
             self.n_iteracoes += 1

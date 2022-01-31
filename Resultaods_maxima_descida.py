@@ -12,10 +12,10 @@ from Classe_maxima_descida_ORDEM_1 import MaximaDescida
 # """
 #
 # Beale -- ok --> BEM SUCEDIDIDO
-# teste = MaximaDescida([0, 0], 2, 100000)
-# teste.estrutura_metodo()
-# print(f'Valor do ponto ótimo {teste.x_vtr},\n '
-#       f'Valor da função no ponto ótimo {teste.f_xi(teste.x_vtr)}')
+teste = MaximaDescida([0, 0], 2, 100000)
+teste.estrutura_metodo()
+print(f'Valor do ponto ótimo {teste.x_vtr},\n '
+      f'Valor da função no ponto ótimo {teste.f_xi(teste.x_vtr)}')
 #
 # """
 # f(x, y)mín == 0 ---------- (3, 0.5)
